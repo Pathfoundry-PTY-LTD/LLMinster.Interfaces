@@ -19,19 +19,19 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore LLMinster.Interfaces.sln
+        run: dotnet restore LLMinster.Interfaces/LLMinster.Interfaces.sln
 
       - name: Get version from LLMinster.Interfaces.csproj
         id: get_version
         run: |
-          version=$(grep '<Version>' LLMinster.Interfaces.csproj | sed 's/.*<Version>\(.*\)<\/Version>.*/\1/')
+          version=$(grep '<Version>' LLMinster.Interfaces/LLMinster.Interfaces.csproj | sed 's/.*<Version>\(.*\)<\/Version>.*/\1/')
           echo "VERSION=$version" >> $GITHUB_ENV
 
       - name: Build
-        run: dotnet build LLMinster.Interfaces.sln --no-restore --configuration Release
+        run: dotnet build LLMinster.Interfaces/LLMinster.Interfaces.sln --no-restore --configuration Release
 
       - name: Pack
-        run: dotnet pack LLMinster.Interfaces.csproj --no-build --configuration Release --output ./artifacts /p:PackageVersion=${{ env.VERSION }}
+        run: dotnet pack LLMinster.Interfaces/LLMinster.Interfaces.csproj --no-build --configuration Release --output ./artifacts /p:PackageVersion=${{ env.VERSION }}
 
       - name: Publish to NuGet
         env:

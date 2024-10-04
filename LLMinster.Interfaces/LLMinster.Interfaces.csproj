@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Version>0.0.1</Version>
+        <PackageVersion>$(Version)</PackageVersion>
+        <PackageTags>LLM; CSharp; Composable; Interfaces</PackageTags>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Philip Laureano</Authors>
+        <PackageProjectUrl>https://github.com/philiplaureano/LLMinster.Interfaces</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/philiplaureano/LLMinster.Interfaces</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Description>A C# interface library for Language Model clients (LLM).</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+</Project>

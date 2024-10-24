@@ -3,8 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <PackageVersion>$(Version)</PackageVersion>
+        <PackageId>LLMinster.Interfaces</PackageId>
         <PackageTags>LLM; CSharp; Composable; Interfaces</PackageTags>
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

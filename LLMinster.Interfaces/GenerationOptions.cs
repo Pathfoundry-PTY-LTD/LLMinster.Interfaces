@@ -1,19 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace LLMinster.Interfaces
+﻿namespace LLMinster.Interfaces
 {
-    public record GenerationOptions
+    public class GenerationOptions
     {
-        /// <summary>
-        /// Determines which model will be used in the request.
-        /// </summary>
-        public string Model { get; set; } = string.Empty;
-        
-        /// <summary>
-        /// The list of messages that will be sent to the model.
-        /// </summary>
-        public IList<Message> Messages { get; set; } = new List<Message>();
-        
         /// <summary>
         /// Controls the randomness of the output. Lower values make the output more deterministic.
         /// </summary>

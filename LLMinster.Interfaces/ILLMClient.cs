@@ -1,9 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace LLMinster.Interfaces;
 
 public interface ILLMClient
 {
-    Task<string> GenerateContentAsync(GenerationOptions options, CancellationToken cancellationToken = default);
+    Task<string> GenerateContentAsync(string prompt, GenerationOptions options);
 }
